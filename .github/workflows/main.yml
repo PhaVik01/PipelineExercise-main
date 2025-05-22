@@ -23,5 +23,12 @@ jobs:
         run: 
             python -m unittest discover -s tests -p '*Tests.py' -v      
 
+      - name: Tests Sucess Message  
+        run: echo All tests passed
+        
+      - name: Verify HTML
+        run:
+            grep "<h1>Code is running</h1>" index.html    
+
         
  
