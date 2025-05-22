@@ -35,7 +35,7 @@ jobs:
             grep "<h1>Code is running</h1>" index.html
             
       - name: Copy to dist
-        run:
+        run: |
           mkdir dist
           cp index.html dist/index.html     
       - name: Setup Pages
