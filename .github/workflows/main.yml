@@ -5,6 +5,10 @@ on:
     branches: [ "main", "feature/create-pipeline" ]
   pull_request:
     branches: [ "main", "feature/create-pipeline" ]
+permissions:
+  id-token: write
+  pages: write
+  contents: read
 
 
   
