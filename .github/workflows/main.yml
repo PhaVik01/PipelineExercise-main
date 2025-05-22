@@ -28,7 +28,21 @@ jobs:
         
       - name: Verify HTML
         run:
-            grep "<h1>Code is running</h1>" index.html    
+            grep "<h1>Code is running</h1>" index.html
+            
+      - name: Copy to dist
+        run:
+          mkdir dist
+          cp index.html dist/index.html     
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: 'dist'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
 
         
  
